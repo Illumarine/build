@@ -7,7 +7,7 @@ Work-in-progress build systems for Illumarine.
 If files are not in places the script will immediately expect, run the following command.
 
 ```sh
-sh ./build -m /path/to/build -p /path/to/illumos-gate/proto
+sh ./build -b /path/to/build -p /path/to/illumos-gate/proto
 ```
 
 Where it links this build directory, and your illumos-gate directory.
