@@ -16,4 +16,4 @@ cd zsh-5.9
 make
 make install
 cd ..
-rm -rf zsh-5.9/
+rm -rf zsh-5.9/ zsh-5.9.tar.xz
