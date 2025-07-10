@@ -30,4 +30,4 @@ if [ ! -f ${MVI_DIR}/iso/uefi.sh ]; then
   exit 1
 fi
 
-sh ${MVI_DIR}/iso/pureboot.sh -o build_$$.iso -p ${PROTO_DIR} -b ${MVI_DIR}
+sh ${MVI_DIR}/iso/pureboot.sh -o /tmp/build_$$.iso -p ${PROTO_DIR} -b ${MVI_DIR}
