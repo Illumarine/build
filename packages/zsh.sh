@@ -14,6 +14,7 @@ wget https://www.zsh.org/pub/zsh-5.9.tar.xz
 tar -xvf zsh-5.9.tar.xz
 cd zsh-5.9
 ./configure --prefix=${PROTO_DIR}/usr/local
+# Add sed to insert code at line 33
 make
 make install
 cd ..
