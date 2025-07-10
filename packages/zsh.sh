@@ -1,7 +1,8 @@
 PROTO_DIR=${HOME}/illumos-gate/proto/root_i386
 
-while getopts "o:p:b:" opt; do
+while getopts "p:" opt; do
   case $opt in
+    p)
       # proto directory
       PROTO_DIR="$OPTARG"
       ;;
