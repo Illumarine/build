@@ -54,7 +54,7 @@ MVI_DIR=${HOME}/build
 #
 # argument processing
 #
-while getopts "o:p:m:" opt; do
+while getopts "o:p:b:" opt; do
   case $opt in
     o)
       # output file
