@@ -21,6 +21,10 @@ ${HOME}/illumos-gate/proto/root_i386 # for your illumos-gate build
 
 ... then theoretically you can run `sh ./build` by itself, with no issues. Still, use the more verbose command just to be safe.
 
+Other options
+
+- `-o` is for output ISO file name/path (ex: `-o /root/myillumarine.iso`)
+
 ## Contributing
 
 ### Directory Structure
