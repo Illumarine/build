@@ -23,5 +23,5 @@ while getopts "o:p:b:" opt; do
 done
 shift $((OPTIND-1))
 
-# TODO: Build packages in proto before building ISO
+sh ${MVI_DIR}/build-pkgs.sh -b ${MVI_DIR} -p ${PROTO_DIR}
 sh ${MVI_DIR}/build-iso.sh -b ${MVI_DIR} -p ${PROTO_DIR} -o ${ISO_NAME}
