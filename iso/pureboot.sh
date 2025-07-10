@@ -112,6 +112,7 @@ if [ ! -d "$DESTDIR" ]; then
   bail "$DESTDIR could not be created"
 fi
 cd ${PROTO_DIR} || bail "cannot cd to ${PROTO_DIR}"
+ls # for debugging
 tar cf - . | ( cd ${DESTDIR} ; tar xf -)
 
 #
@@ -120,6 +121,7 @@ tar cf - . | ( cd ${DESTDIR} ; tar xf -)
 #
 cd ${DESTDIR} || bail "cannot cd to ${DESTDIR}"
 ## rm -fr opt
+ls # for debugging
 
 #
 # illumos itself cannot run SMF, that needs libxml2, so just run a shell
