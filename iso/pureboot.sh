@@ -137,8 +137,8 @@ EOF
 cd ${DESTDIR} || bail "cannot cd to ${DESTDIR}"
 cat > ${DESTDIR}/etc/mvi.rc <<EOF
 #!/sbin/sh
-mount -F tmpfs tmpfs /root
-cd /root
+mount -F tmpfs tmpfs /root > /dev/console
+cd /root > /dev/console
 echo " *** Welcome to Illumarine ***" > /dev/console
 /bin/ksh93 >/dev/console 2>&1 </dev/console
 EOF
