@@ -122,6 +122,7 @@ cd ${DESTDIR} || bail "cannot cd to ${DESTDIR}"
 ## rm -fr opt
 
 # Add tmpfs mounts for volatile directories
+chmod 700 ${DESTDIR}/root
 cat >> ${DESTDIR}/etc/vfstab <<EOF
 swap   -   /tmp   tmpfs   -   yes   -
 swap   -   /var   tmpfs   -   yes   -
@@ -137,6 +138,7 @@ cd ${DESTDIR} || bail "cannot cd to ${DESTDIR}"
 cat > ${DESTDIR}/etc/mvi.rc <<EOF
 #!/sbin/sh
 echo " *** Welcome to Illumarine ***" > /dev/console
+cd /root
 /bin/ksh93 >/dev/console 2>&1 </dev/console
 EOF
 chmod a+x ${DESTDIR}/etc/mvi.rc
