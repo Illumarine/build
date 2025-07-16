@@ -121,6 +121,13 @@ tar cf - . | ( cd ${DESTDIR} ; tar xf -)
 cd ${DESTDIR} || bail "cannot cd to ${DESTDIR}"
 ## rm -fr opt
 
+# Add tmpfs mounts for volatile directories
+cat >> ${DESTDIR}/etc/vfstab <<EOF
+swap   -   /tmp   tmpfs   -   yes   -
+swap   -   /var   tmpfs   -   yes   -
+swap   -   /root  tmpfs   -   yes   -
+EOF
+
 #
 # illumos itself cannot run SMF, that needs libxml2, so just run a shell
 # this is a script so (a) we can emit a message saying we're ready,
